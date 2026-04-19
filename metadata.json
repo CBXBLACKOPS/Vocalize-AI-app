@@ -1,0 +1,6 @@
+{
+  "name": "Remix: Vocalize AI",
+  "description": "High-quality text-to-speech generator powered by Gemini AI. Choose different voices, adjust rates, and download audio files.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

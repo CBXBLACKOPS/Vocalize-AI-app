@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  
+  --color-elegant-bg: #0d0d0d;
+  --color-elegant-surface: #1a1a1a;
+  --color-elegant-border: #333333;
+  --color-elegant-accent: #7c4dff;
+  --color-elegant-secondary: #9e9e9e;
+  --color-elegant-darker: #080808;
+}
+
+@layer base {
+  body {
+    @apply bg-elegant-bg text-white selection:bg-elegant-accent/30;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    box-shadow: 0 0 10px rgba(124, 77, 255, 0.4), 0 0 20px rgba(124, 77, 255, 0.1);
+  }
+
+  .neon-glow-strong {
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.6), 0 0 30px rgba(124, 77, 255, 0.3);
+  }
+
+  .shape-cut-corner {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%);
+  }
+
+  .shape-cyber-button {
+    clip-path: polygon(0 0, 92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%);
+  }
+
+  .neon-pulse {
+    animation: neon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 10px var(--color-elegant-accent)); }
+    50% { opacity: 0.8; filter: brightness(1) drop-shadow(0 0 5px var(--color-elegant-accent)); }
+  }
+
+  .shape-cyber-tag {
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  }
+
+  .shape-hex-box {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  }
+}
